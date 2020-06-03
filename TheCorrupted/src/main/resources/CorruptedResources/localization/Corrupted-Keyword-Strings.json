@@ -1,0 +1,65 @@
+[
+
+	{
+
+		"PROPER_NAME": "[#239ecf]Mana [][#239ecf]blight",
+	
+		"NAMES": [
+	
+				"[#239ecf]Mana [][#239ecf]blight",
+
+		  "Mana blight",
+	
+			"Mana_blight",
+			
+			"mana blight",
+
+			"mana_blight",
+	
+		  "[#239ecf]Mana blight",
+	
+			"[#239ecf]Mana_blight",
+			
+			"[#239ecf]mana blight",
+
+			"[#239ecf]mana_blight"
+	
+		],
+	
+		"DESCRIPTION": "Creatures with Mana blight will recieve damage once per magic effect triggered from the attack that targeted it."
+	
+	  },
+
+
+	{
+
+		"PROPER_NAME": "[#239ecf]Mana [][#239ecf]Regen",
+
+		"NAMES": [
+
+			"[#239ecf]Mana [][#239ecf]Regen",
+
+			"Mana Generation",
+
+			"Mana_Generation",
+
+			"Mana Regen",
+
+			"Mana_Regen",
+
+			"[#239ecf]Mana_Gen",
+
+			"[#239ecf]Mana_Regen",
+
+			"ManaGen",
+
+			"ManaGen."
+
+		],
+
+		"DESCRIPTION": "At the End of your tur Gain 1 Mana then reduces by 1. "
+
+	}
+
+
+]

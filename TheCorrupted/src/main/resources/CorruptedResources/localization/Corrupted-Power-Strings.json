@@ -1,0 +1,137 @@
+{
+        
+"Corrupted:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied ", " keyword.", " keywords."]
+},
+"Corrupted:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn TOUCH ", " enemy." , " enemies."]
+},
+
+  "Corrupted:TempRegen": {
+    "NAME": "Infernal Surge",
+    "DESCRIPTIONS": ["Gain #b", " Temporary HP for ", "turn", "turns"]
+  },
+
+  "Corrupted:DecayResist": {
+    "NAME": "Decay Resist",
+    "DESCRIPTIONS": ["Takes #b", " less damage from Decay for ", "turn", "turns"]
+  },
+
+"Corrupted:ManaShellPower": {
+        "NAME": "Mana Shell",
+        "DESCRIPTIONS": ["Gain #b", " times your [#239ecf]mana count/3, at the end of your turn. NL Total of ", " block will be gained."]
+},
+"Corrupted:Mana": {
+        "NAME": "Mana",
+        "DESCRIPTIONS": ["Used for Powering your cards. NL Current count is #b", "."]
+},
+"Corrupted:ManaGeneration": {
+        "NAME": "Mana Regen",
+        "DESCRIPTIONS": ["gain #b1 #yMana at the end of your turn, then reduce by #b1."]
+},
+"Corrupted:Inefficiency": {
+        "NAME": "Inefficiency",
+        "DESCRIPTIONS": ["At the end of your turn, lose", "Mana. Removes itself if you have 3 Mana or less"]
+},
+"Corrupted:witheringBarrierPower": {
+        "NAME": "Withering Barrier",
+        "DESCRIPTIONS": [" gain #b2 #yDecay at teh end of your turn. all blocked attack damage you take is reflected to the attacker in #yDecay."]
+},
+"Corrupted:BlackArmorPower": {
+        "NAME": "Black Armor",
+        "DESCRIPTIONS": ["The next ", " times youd take decay damage, gain that much block instead."]
+},
+"Corrupted:HybridRoundsPower": {
+        "NAME": "Hybrid Rounds",
+        "DESCRIPTIONS": ["Your ammo is now temporarily infused with Mana causing your next attack to do #b",
+        " additional damage."]
+},
+"Corrupted:CripplingRoundsPower": {
+        "NAME": "Crippling Rounds",
+        "DESCRIPTIONS": ["Your ammo is temporarily Cripples the enemy causing the lose ",
+        " Strength for the rest of the turn."]
+},
+"Corrupted:UndyingPower": {
+        "NAME": "Undying",
+        "DESCRIPTIONS": ["Prevent the next time you'd take fatal damage."]
+},
+"Corrupted:RapidFirePower": {
+        "NAME": "Rapid Fire",
+        "DESCRIPTIONS": [
+                "Deal 2 damage to ",
+                 " random enemies whenever you draw an ammo card."
+                ]
+},
+"Corrupted:DecayPower": {
+        "NAME": "Decay",
+        "DESCRIPTIONS": [
+          "At the end of your turn, take #b",
+          " damage, then reduce #yDecay by #b1.",
+          "At the end of its turn, it takes #b",
+          " damage, then increase #yDecay by #b1."
+        ]
+      },
+ "Corrupted:EvilCloudPower": {
+        "NAME": "Evil Cloud",
+        "DESCRIPTIONS": [
+          "Gain #b1 #yDecay at the end of its turn instead of losing it."
+        ]
+      },
+
+"Corrupted:ShortTermPower": {
+        "NAME": "Short Term Backfire",
+        "DESCRIPTIONS": ["at the end of your turn, lose #yMana equal to #b"]
+},
+"Corrupted:InfernalFormPower": {
+        "NAME": "Infernal Form",
+        "DESCRIPTIONS": ["double your #ypoison damage, take no #yDecay damage. NL at the end of your turn, gain #yMana equal to your #yDecay."]
+},
+"Corrupted:ToxicWallPower": {
+        "NAME": "Toxic Wall",
+        "DESCRIPTIONS": ["upon being attacked, gain #b1 #yDecay and apply #ypoison to the attacker equal to the amount of stacks."]
+},
+"Corrupted:LongTermDebuff": {
+        "NAME": "Long Term Debuff",
+        "DESCRIPTIONS": ["at the start of your turn, lose half of your #ymana."]
+},
+"Corrupted:LongTermBuff": {
+        "NAME": "Long Term Buff",
+        "DESCRIPTIONS": ["at the start of your turn, gain #ymana equal to half of the #ymana when you played Long Term Investment."]
+},
+"Corrupted:NullifyPower": {
+        "NAME": "Nullify",
+        "DESCRIPTIONS": ["Negates the next buff."]
+},
+"Corrupted:ManaBlightPower": {
+        "NAME": "Mana Blight",
+        "DESCRIPTIONS": ["whenever an attack targets this creature and it activates its magic effect, it takes ",
+        "damage at the start of its turn."]
+},
+"Corrupted:SpreadCorruptionPower": {
+        "NAME": "Spreading Corruption",
+        "DESCRIPTIONS": ["At the start of your turn, consume #b", " [#239ecf]mana []and apply #b", " #yDecay to everyone and apply #b", " #yPoison to all enemies."]
+},
+  "Corrupted:DecayPurge": {
+    "NAME": "Purging Decay",
+    "DESCRIPTIONS": ["At the end of your turn, Reduce your Decay by #b1. NL Lasts for #b", " turns. "]
+  },
+  "Corrupted:MenacingPower": {
+    "NAME": "Menacing",
+    "DESCRIPTIONS": ["At the start of your turn, apply #b", " Weak and Vulnerable to ALL enemies that intend to attack. "]
+  },
+  "Corrupted:Leech": {
+    "NAME": "Leech",
+    "DESCRIPTIONS": ["Gain 1 Mana for every 15 attack unblocked attack damage the owner receives w."]
+  },
+  "Corrupted:Sparkle": {
+    "NAME": "Sparkle",
+    "DESCRIPTIONS": ["At the start of its turn, deal ", "damage to itself."]
+  },
+  "Corrupted:tempBarricade": {
+    "NAME": "Infernal Barrier",
+    "DESCRIPTIONS": ["This creature will not lose block at the end of its next ", "turn.", "turns."]
+  }
+
+}

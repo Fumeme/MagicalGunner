@@ -1,0 +1,11 @@
+{
+	"InfernalSpawn": {
+		"MOVES": [
+			"Blighten",
+			"Cursed Shockwave",
+			"Armor up"
+		],
+		"NAME": "Infernal Spawn",
+		"DIALOG": []
+	}
+}

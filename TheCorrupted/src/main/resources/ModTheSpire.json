@@ -1,0 +1,10 @@
+{
+  "modid": "magicalmod",
+  "name": "Magical Mod",
+  "author_list": ["Fumeme"],
+  "description": "not yet good enough, lel",
+  "version": "0.0.5",
+  "sts_version": "01-28-2020",
+  "mts_version": "3.6.3",
+  "dependencies": ["basemod", "stslib"]
+}
