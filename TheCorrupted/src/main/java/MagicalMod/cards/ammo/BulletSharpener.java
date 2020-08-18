@@ -81,7 +81,7 @@ public class BulletSharpener extends AbstractCorrCard  {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(1);
+            this.upgradeDamage(2);
             this.upgradeMagicNumber(1);
             this.initializeDescription();
         }

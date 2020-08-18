@@ -30,12 +30,13 @@ public class LeechPower extends TwoAmountPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
+        this.amount2 = thresh;
+
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
         this.img = new Texture(IMG);
         this.source = source;
 
-        this.amount2 = thresh;
         this.updateDescription();
 
 
@@ -76,7 +77,7 @@ public class LeechPower extends TwoAmountPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         addToBot(new ReducePowerAction(owner, owner, this, 1));
-        this.amount2 = thresh;
+        this.amount2 = this.thresh;
     }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))

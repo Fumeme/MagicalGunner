@@ -44,7 +44,7 @@ public class Barrage extends AbstractCorrCard {
 
 
     private int AMOUNT = 2;
-    private int DAMAGE = 5;
+    private int DAMAGE = 6;
 
     // /STAT DECLARATION/
 
@@ -76,7 +76,7 @@ public class Barrage extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
+            this.upgradeDamage(3);
             this.target = CardTarget.ENEMY;
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();

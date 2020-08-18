@@ -85,8 +85,8 @@ public class Flare extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.rawDescription = UPGRADE;
-            this.exhaust = false;
+            this.upgradeMagicNumber(1);
+            this.UpgradeSecondMagicNumber(-1);
             this.initializeDescription();
         }
     }

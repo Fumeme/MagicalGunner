@@ -45,9 +45,8 @@ public class ReinArmor extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 1;
-    private static final int BLOCK = 7;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int BLOCK = 11;
+    private static final int MAGIC = 2;
 
 
     // /STAT DECLARATION/
@@ -57,10 +56,12 @@ public class ReinArmor extends AbstractCorrCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);        
         this.baseBlock = BLOCK;
         this.magicNumber = this.baseMagicNumber = MAGIC;
+        this.SecondMagicNumber = this.BaseSecondMagicNumber = 1;
         
         this.rawDescription = DESCRIPTION + ReinArmor.EFFECTS[0];
         
         this.initializeDescription();
+        this.exhaust = true;
     }
 
     // Actions the card should do.
@@ -116,7 +117,9 @@ public class ReinArmor extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_MAGIC);
+            this.upgradeBlock(2);
+            this.upgradeMagicNumber(1);
+            this.UpgradeSecondMagicNumber(1);
             this.rawDescription = DESCRIPTION + ReinArmor.EFFECTS[0];
             this.initializeDescription();
         }

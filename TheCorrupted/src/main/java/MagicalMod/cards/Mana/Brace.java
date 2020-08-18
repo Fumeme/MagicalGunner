@@ -47,15 +47,14 @@ public class Brace extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 1;
-    private static final int MAGIC = 5;
 
     // /STAT DECLARATION/
 
 
     public Brace() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 12;
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.baseBlock = 10;
+        this.SecondMagicNumber = this.BaseSecondMagicNumber = 5;
     }
 
 
@@ -98,6 +97,8 @@ public class Brace extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            upgradeBlock(2);
+            UpgradeSecondMagicNumber(4);
             this.initializeDescription();
         }
     }

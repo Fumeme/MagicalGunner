@@ -1,10 +1,15 @@
-package MagicalMod.cards.Mana;
+package MagicalMod.cards.ammo;
 
+import MagicalMod.MagicalBase;
 import MagicalMod.cards.AbstractCorrCard;
+import MagicalMod.cards.Focusfire;
+import MagicalMod.patches.AbstractCardEnum;
+import MagicalMod.powers.Mana;
+import MagicalMod.powers.Sparkle;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,11 +18,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import MagicalMod.MagicalBase;
-import MagicalMod.patches.AbstractCardEnum;
-import MagicalMod.powers.Mana;
-
-public class DarkmagicSlice extends AbstractCorrCard {
+public class Bullet extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -27,14 +28,16 @@ public class DarkmagicSlice extends AbstractCorrCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = MagicalBase.makeID("DarkmagicSlice");
+    public static final String ID = MagicalBase.makeID("NormalBullet");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = MagicalBase.makePath(MagicalBase.DEFAULT_COMMON_ATTACK);
+    public static final String IMG = MagicalBase.makePath(MagicalBase.ReAmmo);
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
+
     // /TEXT DECLARATION/
+
 
     // STAT DECLARATION
 
@@ -43,36 +46,67 @@ public class DarkmagicSlice extends AbstractCorrCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
-    private static final int COST = 2;
-    private static final int DAMAGE = 7;
+    private static final int COST = 0;
+    private static final int DAMAGE = 2;
 
     // /STAT DECLARATION/
 
-    public DarkmagicSlice() {
+    public Bullet() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
+this.baseMagicNumber = 1;
+        tags.add(MagicalBase.Ammo);
+
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-
-            if (magic((short) 15)) {
-
-                addToBot(new ReducePowerAction(p,p,Mana.POWER_ID,2));
-            }
-
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+        addToBot(new DamageAction(m,
                 new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                AbstractGameAction.AttackEffect.FIRE));
+        if (ammocheck()) {
+            addToBot(new DamageAction(m,
+                    new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                    AbstractGameAction.AttackEffect.FIRE));
+        }
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+
+    }
+    @Override
+    public void applyPowers() {
+
+        int tmp = this.baseDamage;
+        if (magic(5)) {
+            this.baseDamage += this.magicNumber;
+        }
+        super.applyPowers();
+        this.baseDamage = tmp;
+        this.isDamageModified = this.baseDamage != this.damage;
+/**
+        if (magic(5)) {
+
+            this.rawDescription = DESCRIPTION + Focusfire.EFFECTS[1];
+        } else {
+
+            this.rawDescription = DESCRIPTION + Focusfire.EFFECTS[0];
+        }
+**/
+        this.initializeDescription();
     }
 
-    boolean magic(short min) {
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        int tmp = this.baseDamage;
+        if (magic((short) 5)) {
+            this.baseDamage += this.magicNumber;
+        }
+        super.calculateCardDamage(mo);
+        this.baseDamage = tmp;
+        this.isDamageModified = this.baseDamage != this.damage;
+    }
+    boolean magic(int min) {
         if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
 
             return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= min;
@@ -80,49 +114,20 @@ public class DarkmagicSlice extends AbstractCorrCard {
         }
         return false;
     }
-    @Override
-    public void applyPowers(){
-
-        int tmp = this.baseDamage;
-
-        if (magic((short) 5)) {
-
-            this.baseDamage += 4;
-
-            if (magic((short) 15)) {
-
-                this.damage *=2;
-
+    boolean ammocheck() {
+        int hasammo = 0;
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c.hasTag(MagicalBase.Ammo)) {
+                hasammo +=1;
             }
         }
-        super.applyPowers();
-        this.baseDamage = tmp;
-        this.isDamageModified = this.baseDamage != this.damage;
-
-        this.initializeDescription();
-    }
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        int tmp = this.baseDamage;
-        if (magic((short) 5)) {
-
-            this.baseDamage += 4;
-
-            if (magic((short) 15)) {
-
-                this.damage *=2;
-
-            }
-        }
-        super.calculateCardDamage(mo);
-        this.baseDamage = tmp;
-        this.isDamageModified = this.baseDamage != this.damage;
+        return hasammo>1;
     }
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new DarkmagicSlice();
+        return new Bullet();
     }
 
     // Upgraded stats.
@@ -130,7 +135,8 @@ public class DarkmagicSlice extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
+this.upgradeDamage(1);
+this.upgradeMagicNumber(1);
             this.initializeDescription();
         }
     }

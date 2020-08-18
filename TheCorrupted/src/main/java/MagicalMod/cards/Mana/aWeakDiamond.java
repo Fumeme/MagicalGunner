@@ -45,29 +45,34 @@ public class aWeakDiamond extends AbstractCorrCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
+
     private static final int MAGIC = 2;
+    private static final int metal = 2;
+    private static final int plated = 3;
 
     // /STAT DECLARATION/
 
 
     public aWeakDiamond() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = MAGIC;
+        this.magicNumber = this.baseMagicNumber = metal;
+        BaseSecondMagicNumber = plated;
+        BaseThirdMagicNumber = MAGIC;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (magic(2)) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, Mana.POWER_ID, 2));
+        if (magic(ThirdMagicNumber)) {
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, Mana.POWER_ID, ThirdMagicNumber));
 
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new MetallicizePower(p, this.magicNumber), this.magicNumber));
 
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                    new PlatedArmorPower(p, this.magicNumber * 2), this.magicNumber * 2));
+                    new PlatedArmorPower(p, this.SecondMagicNumber), this.SecondMagicNumber));
 
         }
     }
@@ -92,9 +97,9 @@ public class aWeakDiamond extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.name = "is no Diamond at all";
             this.initializeTitle();
             this.upgradeMagicNumber(1);
+            this.UpgradeSecondMagicNumber(2);
             this.initializeDescription();
         }
     }

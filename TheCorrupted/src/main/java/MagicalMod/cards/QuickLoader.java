@@ -61,7 +61,7 @@ public class QuickLoader extends AbstractCorrCard {
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, this.block));
 
-        addToBot((AbstractGameAction)new DrawCardAction(this.magicNumber, (AbstractGameAction)new ScrapeFollowUpAction()));
+        addToBot(new DrawCardAction(this.magicNumber, new ScrapeFollowUpAction()));
     }
 
     // Which card to return when making a copy of this card.

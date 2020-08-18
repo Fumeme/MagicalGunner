@@ -28,24 +28,23 @@ int base;
 
 
     public void update() {
-        if (magic((short) 4)) {
+        if (magic((short) 5)) {
 
-            this.base +=2;
-            if (magic((short) 7)) {
-
-                this.base +=2;
+            this.base += this.up;
 
                 if (magic((short) 10)) {
 
-                    this.base +=2;
+                    this.base += this.up;
                 }
-            }
         }
+        /**
             if (isUpgraded && magic((short)2)) {
                 addToTop(new GainBlockAction(this.target, this.base + this.up));
             } else {
                 addToTop(new GainBlockAction(this.target, this.base));
             }
+**/
+        addToTop(new GainBlockAction(this.target, this.base));
 
         this.isDone = true;
     }

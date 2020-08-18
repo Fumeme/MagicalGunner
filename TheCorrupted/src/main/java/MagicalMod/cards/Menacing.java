@@ -41,10 +41,10 @@ public class Menacing extends AbstractCorrCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int BLOCK = 5;
 
-    private static final int turns = 2;
+    private static final int turns = 1;
     private static final int amount = 1;
 
     // /STAT DECLARATION/
@@ -54,14 +54,18 @@ public class Menacing extends AbstractCorrCard {
         super(ID, NAME, IMG, COST, actualDESC, TYPE, COLOR, RARITY, TARGET);
 
         this.block = this.baseBlock = BLOCK;
-        this.magicNumber = this.baseMagicNumber = turns;
-        this.SecondMagicNumber = this.BaseSecondMagicNumber = amount;
+        this.magicNumber = this.baseMagicNumber = amount;
+        this.SecondMagicNumber = this.BaseSecondMagicNumber = turns;
+        this.rawDescription = DESCRIPTION[0] + DESCRIPTION[1] + DESCRIPTION[2];
+
+        this.initializeDescription();
+
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i<this.timesUpgraded+1; i++ ) {
+        for (int i = 0; i<2; i++ ) {
             AbstractDungeon.actionManager.addToBottom(
                     new GainBlockAction(p, p, this.block));
         }

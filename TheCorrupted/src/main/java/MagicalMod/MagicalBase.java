@@ -4,11 +4,14 @@ import java.nio.charset.StandardCharsets;
 
 import MagicalMod.cards.*;
 import MagicalMod.cards.Mana.*;
+import MagicalMod.events.IdentityCrisisEvent;
 import MagicalMod.patches.relics.LoreDiary.LoreDiaryPatch;
 import MagicalMod.patches.relics.LoreDiary.LoreDiaryReward;
-import MagicalMod.variables.secondstats.SecondBlockNumber;
+import MagicalMod.variables.secondstats.ThirdMagicNumber;
 import MagicalMod.variables.secondstats.SecondDamageNumber;
 import MagicalMod.variables.secondstats.SecondMagicNumber;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -218,7 +221,7 @@ logger.info("adding monster(s)");
                 }));
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
-        logger.info("Done loading badge Image and mod options");
+        logger.info("Done loading badge Image and mod options ");
         
         BaseMod.registerCustomReward(
                 LoreDiaryPatch.LoreDiaryReward,
@@ -229,7 +232,11 @@ logger.info("adding monster(s)");
                     return new RewardSave(customReward.type.toString(), "LoreDiary");
                 });
 
-       }
+
+        BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, Exordium.ID);
+
+
+    }
 
     // =============== / POST-INITIALIZE/ =================
 
@@ -285,7 +292,7 @@ logger.info("adding monster(s)");
         BaseMod.addDynamicVariable(new TuP1());
         BaseMod.addDynamicVariable(new DamageM1());
         BaseMod.addDynamicVariable(new DamageM2());
-        BaseMod.addDynamicVariable(new SecondBlockNumber());
+        BaseMod.addDynamicVariable(new ThirdMagicNumber());
         BaseMod.addDynamicVariable(new SecondDamageNumber());
         BaseMod.addDynamicVariable(new SecondMagicNumber());
 
@@ -329,6 +336,7 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new Reload());
         BaseMod.addCard(new Smoker());
         BaseMod.addCard(new Sparkler());
+        BaseMod.addCard(new CurlingCrash());
 
         BaseMod.addCard(new HybridRounds());
         BaseMod.addCard(new ImmovableObject());
@@ -351,6 +359,7 @@ logger.info("adding monster(s)");
         BaseMod.addCard(new stelarCannon());
         BaseMod.addCard(new MagicBlast());
         BaseMod.addCard(new CoveringFire());
+        BaseMod.addCard(new Bullet());
 
 
 
@@ -367,8 +376,8 @@ logger.info("adding monster(s)");
 
     // ================ /ADD CARDS/ ===================
 
-    
-    
+
+
     // ================ LOAD THE TEXT ===================
 
     @Override
@@ -391,6 +400,10 @@ logger.info("adding monster(s)");
         BaseMod.loadCustomStringsFile(PotionStrings.class,
                 "CorruptedResources/localization/Corrupted-Potion-Strings.json");
 
+        // Event Strings
+        BaseMod.loadCustomStringsFile(EventStrings.class,
+                "CorruptedResources/localization/Corrupted-Event-Strings.json");
+
         logger.info("Done edittting strings");
     }
 
@@ -404,11 +417,11 @@ logger.info("adding monster(s)");
     @Override
     public void receiveEditKeywords() {
 
-        final String[] Magic = {"[#239ecf]magic", "magic"};
-        BaseMod.addKeyword(Magic, "(Magic Y) Requires atleast Y stacks of Mana to activate the cards effect");
+        final String[] Magic = {"[][#239ecf]Magic","[#239ecf]Magic", "Magic"};
+        BaseMod.addKeyword(Magic, "(Magic Y) Requires at least Y stacks of Mana to activate the cards effect");
         
-        final String[] Corruption = {"[#9c65c3]corruption"};
-        BaseMod.addKeyword(Corruption, "(Corruption Z) Requires atleast Z stacks of Decay to activate the cards effect");
+        //final String[] Corruption = {"[#9c65c3]corruption"};
+       // BaseMod.addKeyword(Corruption, "(Corruption Z) Requires atleast Z stacks of Decay to activate the cards effect");
 
         final String[] Mana = {"Mana", "[][#239ecf]Mana", "[#239ecf]Mana"};
         BaseMod.addKeyword(Mana, "Used for Powering your cards.");
@@ -417,8 +430,8 @@ logger.info("adding monster(s)");
         BaseMod.addKeyword(ManaGen, "At the End of your tur Gain 1 Mana then reduces by 1.");
 
 
-        final String[] Decay = {"decay"};
-        BaseMod.addKeyword(Decay, "At the end of your turn, take damage equal to the stacks this has then reduce it by one (just blockable poison)");
+        //final String[] Decay = {"decay"};
+       // BaseMod.addKeyword(Decay, "At the end of your turn, take damage equal to the stacks this has then reduce it by one (just blockable poison)");
   
         final String[] Ammo = {"ammo"};
         BaseMod.addKeyword(Ammo, "Ammo cards are low damage 0-cost attacks that have multiple magic effects");
@@ -429,8 +442,8 @@ logger.info("adding monster(s)");
         final String[] Inefficiency = {"inefficiency"};
         BaseMod.addKeyword(Inefficiency, "if you have more than 3 mana reduce you mana by you Inefficiency stacks otherwise it removes itself.");
 
-        final String[] Leech = {"Leech"};
-        BaseMod.addKeyword(Leech, "Gain 4 Mana for every 15 attack unblocked attack damage the owner receives.");
+        final String[] Leech = {"Leech","leech"};
+        BaseMod.addKeyword(Leech, "Gain 1 Mana for every 15 attack unblocked attack damage the owner receives.");
 
 
         Gson gson = new Gson();
@@ -452,7 +465,8 @@ logger.info("adding monster(s)");
     public static String makeID(String idText) {
         return "Corrupted:" + idText;
     }
-    
 
 
-}
+
+
+    }

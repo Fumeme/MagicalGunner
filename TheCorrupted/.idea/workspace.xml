@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a88be31e-f935-437e-ad66-7b025b1d5646" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/PreloadAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/SmokerAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/Brace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Preloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Smoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Sparkler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/Sparkle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/MagicalBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/MagicalBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/BulletSharpenAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/BulletSharpenAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/SmokerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/actions/SmokerAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/AbstractCorrCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/AbstractCorrCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Barrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Barrage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/DefaultCommonSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/DefaultCommonSkill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/BattleSense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/BattleSense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Channel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/DefaultCommonAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/DefaultCommonAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Flare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Flare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Focusfire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Focusfire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/HairyTrigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/HairyTrigger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/HybridRounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/HybridRounds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/BurstFire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/BurstFire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/MagicBlast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/MagicBlast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/LeechCast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/LeechCast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/Brace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/Brace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/CosmicNova.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/CosmicNova.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/DarkmagicSlice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/DarkmagicSlice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/ManaBlade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/ManaBlade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/InstaLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/InstaLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Reload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Reload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/Overload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/Overload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/ReinArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/ReinArmor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/aWeakDiamond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Mana/aWeakDiamond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Menacing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/Menacing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/QuickLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/QuickLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/TransMind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/TransMind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/BulletSharpener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/BulletSharpener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Preloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Preloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Smoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Smoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Sparkler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/Sparkler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/SpecializedShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/cards/ammo/SpecializedShot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/characters/Tasha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/characters/Tasha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/LeechPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MagicalMod/powers/LeechPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MagicalMod/variables/secondstats/SecondBlockNumber.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Card-Strings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CorruptedResources/localization/Corrupted-Power-Strings.json" afterDir="false" />
     </list>
@@ -45,10 +58,10 @@
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="1Z3R9SqgW4zPMWJTbU7bktwNQmH" />
@@ -57,13 +70,13 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Sts-Overloaded" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -71,26 +84,26 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="CorruptedMod.powers" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="MagicalMod.cards.ammo" />
       <recent name="CorruptedMod.cards.Mana" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="MagicalMod.actions" />
-      <recent name="MagicalMod.cards.ammo" />
-      <recent name="MagicalMod.cards.Mana" />
-      <recent name="MagicalMod.powers" />
-      <recent name="MagicalMod.cards" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kashi\Documents\sts mods\def\sts-TashaMod\TheCorrupted\src\main\resources\CorruptedResources\localization" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="MagicalMod.powers" />
+      <recent name="MagicalMod.cards.ammo" />
+      <recent name="MagicalMod.actions" />
+      <recent name="MagicalMod.cards.Mana" />
+      <recent name="MagicalMod.cards" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="CorruptedMod.powers" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="TashaMod (2)" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -103,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="TashaMod (2)" />
       <option name="filePath" />
       <option name="vmParameters" />
@@ -138,6 +151,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -161,70 +175,63 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1585083336185">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1585083336185" />
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1585801915375">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585801915375" />
-    <state x="413" y="140" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1587096029403">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="140" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1587096029403" />
-    <state x="531" y="253" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584070655521">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="531" y="253" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1584070655521" />
-    <state x="263" y="19" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1584070652934">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="263" y="19" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1366.728@0.0.1366.728" timestamp="1584070652934" />
     <state x="479" y="249" width="422" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590570649010">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="479" y="249" width="422" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1590570649010" />
-    <state x="463" y="81" key="FileChooserDialogImpl" timestamp="1584070651044">
+    <state x="463" y="81" key="FileChooserDialogImpl" timestamp="1596492657077">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="81" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584070651044" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1591079620357">
+    <state x="463" y="81" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596492657077" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1597784458420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591079620357" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1591079620357">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597784458420" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1597784458420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591079620357" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1591079620356">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597784458420" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1597784458420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591079620356" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1591079620357">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597784458420" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1597784458420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591079620357" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1590112690230">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597784458420" />
+    <state x="348" y="63" key="NewModule_or_Project.wizard" timestamp="1596492659910">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590112690230" />
-    <state x="413" y="119" key="extract.method.dialog" timestamp="1585040963277">
+    <state x="348" y="63" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1596492659910" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597784441755">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1585040963277" />
-    <state x="0" y="0" width="737" height="728" key="find.popup" timestamp="1590210503169">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1597784441755" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1597471607202">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" width="737" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1590210503169" />
-    <state x="389" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1586146742857">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1597471607202" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597473394517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1586146742857" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1597473394517" />
+    <state x="243" y="0" width="1005" height="715" key="dock-window-1" timestamp="1597710524063">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="243" y="0" width="1005" height="715" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1597710524063" />
+    <state x="38" y="-6" width="737" height="728" key="find.popup" timestamp="1591405257167">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="38" y="-6" width="737" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1591405257167" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1597710496699">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1597710496699" />
   </component>
 </project>

@@ -49,7 +49,7 @@ public class LeechCast extends AbstractCorrCard {
     public LeechCast() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
-        this.block = this.baseBlock = 15;
+        this.block = this.baseBlock = 13;
     }
 
 
@@ -78,6 +78,7 @@ public class LeechCast extends AbstractCorrCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeBlock(2);
+            this.upgradeMagicNumber(1);
             this.initializeDescription();
         }
     }

@@ -45,8 +45,8 @@ public class ManaBlade extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 1;
-    private static final int MAX = 12;
-    int MIN = 5;
+    private static final int MAX = 13;
+    int MIN = 6;
 
     // /STAT DECLARATION/
 

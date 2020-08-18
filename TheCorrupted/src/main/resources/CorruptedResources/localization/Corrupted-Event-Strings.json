@@ -1,0 +1,19 @@
+{
+  "Overloaded:IdentityCrisisEvent": {
+    "NAME": "Rock",
+    "DESCRIPTIONS": [
+      "you walk and trip on a rock",
+      "You find #g~a~ #g~shiny~ #g~rock.~",
+
+      "#r@YOU@ #r@ARE@ #r@SHINY.@",
+      "You ignore it. someone is probably looking for this rock.",
+      "You have no hands."
+    ],
+    "OPTIONS": [
+      "[Rock] #gRock #gget.",
+      "[No Rock] #rNo #rrock. sad",
+      "[Rock?] #gRock #gand #gApotheosis #gget.",
+      "[Leave]"
+    ]
+  }
+}

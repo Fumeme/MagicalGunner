@@ -43,7 +43,7 @@ public class Overload extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 1;
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
 
     // /STAT DECLARATION/
 
@@ -51,7 +51,7 @@ public class Overload extends AbstractCorrCard {
     public Overload() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = MAGIC;
-        this.SecondMagicNumber = this.BaseSecondMagicNumber = 2;
+        this.SecondMagicNumber = this.BaseSecondMagicNumber = 3;
         this.exhaust = true;
     }
 

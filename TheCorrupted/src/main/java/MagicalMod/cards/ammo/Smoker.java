@@ -57,9 +57,9 @@ public class Smoker extends AbstractCorrCard {
     public Smoker() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        SecondMagicNumber = this.BaseSecondMagicNumber = 2;
+        SecondMagicNumber = this.BaseSecondMagicNumber = 1;
         this.baseMagicNumber = 2;
-        this.baseBlock = 2;
+        this.baseBlock = 1;
         tags.add(MagicalBase.Ammo);
     }
 
@@ -71,7 +71,7 @@ public class Smoker extends AbstractCorrCard {
                         new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.FIRE));
 
-        if (magic((short) 4)) {
+        if (magic((short) 7)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, SecondMagicNumber, false), SecondMagicNumber));
         }
             addToBot(new SmokerAction(p, this.block, this.block,upgraded));
@@ -101,8 +101,8 @@ public class Smoker extends AbstractCorrCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.rawDescription = UPGRADE_DESCRIPTION;
             this.upgradeDamage(2);
+            this.UpgradeSecondMagicNumber(1);
             this.initializeDescription();
         }
     }

@@ -2,6 +2,7 @@ package MagicalMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,7 +20,7 @@ public class Focusfire extends AbstractCorrCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     * 
+     *
      * Strike Deal 7(9) damage.
      */
 
@@ -35,7 +36,7 @@ public class Focusfire extends AbstractCorrCard {
 
     // /TEXT DECLARATION/
 
-    
+
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.BASIC;
@@ -45,18 +46,17 @@ public class Focusfire extends AbstractCorrCard {
 
     private static final int COST = 0;
     private static int DAMAGE = 2;
-    private static final int UPGRADE_PLUS_DMG = 1;
-    private static int bonus = 1;
+    private static final int up = 1;
 
     // /STAT DECLARATION/
 
     public Focusfire() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        this.magicNumber = this.baseMagicNumber = bonus;
-        
-        this.rawDescription = DESCRIPTION + Focusfire.EFFECTS[0];
-        
+        this.magicNumber = this.baseMagicNumber = 1;
+
+        this.rawDescription = DESCRIPTION;
+
         this.initializeDescription();
     }
 
@@ -64,59 +64,66 @@ public class Focusfire extends AbstractCorrCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-  		 AbstractDungeon.actionManager
-         .addToBottom(new DamageAction(m,
-                 new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                 AbstractGameAction.AttackEffect.FIRE));
-    		 
-    		 AbstractDungeon.actionManager
-             .addToBottom(new DamageAction(m,
-                     new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                     AbstractGameAction.AttackEffect.FIRE));
-    		 
+        AbstractDungeon.actionManager
+                .addToBottom(new DamageAction(m,
+                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                        AbstractGameAction.AttackEffect.FIRE));
+
+        AbstractDungeon.actionManager
+                .addToBottom(new DamageAction(m,
+                        new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                        AbstractGameAction.AttackEffect.FIRE));
+
+        if (magic(6)) {
+
+            addToBot(new DrawCardAction(1));
+        }
+
 
     }
-    
-    boolean magic (int min) {
-    	if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
 
-    		 return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= min;
-    		
-    	}
-    	return false;
+    boolean magic(int min) {
+        if (AbstractDungeon.player.hasPower(Mana.POWER_ID)) {
+
+            return AbstractDungeon.player.getPower(Mana.POWER_ID).amount >= min;
+
+        }
+        return false;
     }
+
     @Override
-    public void applyPowers(){
-    	
-    	int tmp = this.baseDamage;
-    	if (magic( 3)){
-    	    this.baseDamage += this.magicNumber;
-    	}
-    	super.applyPowers();
-    	this.baseDamage = tmp;
-    	this.isDamageModified = this.baseDamage != this.damage;
-        
-    	if(magic( 3)) {
-    		
-    		this.rawDescription = DESCRIPTION + Focusfire.EFFECTS[1];
-    	}else {
-    		
+    public void applyPowers() {
+
+        int tmp = this.baseDamage;
+        if (magic(3)) {
+            this.baseDamage += this.magicNumber;
+        }
+        super.applyPowers();
+        this.baseDamage = tmp;
+        this.isDamageModified = this.baseDamage != this.damage;
+
+        if (magic(3)) {
+
+            this.rawDescription = DESCRIPTION + Focusfire.EFFECTS[1];
+        } else {
+
             this.rawDescription = DESCRIPTION + Focusfire.EFFECTS[0];
-    	}
-    	
+        }
+
         this.initializeDescription();
     }
+
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
         int tmp = this.baseDamage;
-        if (magic((short) 3)){
+        if (magic((short) 3)) {
             this.baseDamage += this.magicNumber;
         }
         super.calculateCardDamage(mo);
         this.baseDamage = tmp;
         this.isDamageModified = this.baseDamage != this.damage;
-}
-    
+    }
+
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
@@ -127,10 +134,9 @@ public class Focusfire extends AbstractCorrCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-        	this.upgradeMagicNumber(2);
             this.upgradeName();
-            this.upgradeDamage(UPGRADE_PLUS_DMG);
-            this.rawDescription = DESCRIPTION + Focusfire.EFFECTS[0];
+            this.upgradeDamage(up);
+            this.upgradeMagicNumber(up);
             this.initializeDescription();
         }
     }

@@ -17,10 +17,10 @@ public abstract class AbstractCorrCard extends CustomCard {
     public boolean upgradedSecondMagicNumber; // A boolean to check whether the number has been upgraded or not.
     public boolean isSecondMagicNumberModified; // A boolean to check whether the number has been modified or not, for coloring purposes. (red/green)
 
-    public int BaseSecondBlock;
-    public int SecondBlock;
-    public boolean upgradedSecondBlock;
-    public boolean isSecondBlockModified;
+    public int BaseThirdMagicNumber;
+    public int ThirdMagicNumber;
+    public boolean upgradedThirdMagicNumber;
+    public boolean isThirdMagicNumberModified;
 
     public int BaseSecondDamage;
     public int SecondDamage;
@@ -54,7 +54,7 @@ this.img = img;
         isBlockModified = false;
         isMagicNumberModified = false;
         isSecondMagicNumberModified = false;
-        isSecondBlockModified = false;
+        isThirdMagicNumberModified = false;
         isSecondDamageModified = false;
     }
 
@@ -66,9 +66,9 @@ this.img = img;
             isSecondMagicNumberModified = true; // Modified = true, color it green to highlight that the number is being changed.
         }
 
-        if (upgradedSecondBlock) { // If we set upgradedSecondMagicNumber = true in our card.
-            SecondBlock = BaseSecondBlock; // Show how the number changes, as out of combat, the base number of a card is shown.
-            isSecondBlockModified = true; // Modified = true, color it green to highlight that the number is being changed.
+        if (upgradedThirdMagicNumber) { // If we set upgradedSecondMagicNumber = true in our card.
+            ThirdMagicNumber = BaseThirdMagicNumber; // Show how the number changes, as out of combat, the base number of a card is shown.
+            isThirdMagicNumberModified = true; // Modified = true, color it green to highlight that the number is being changed.
         }
 
         if (upgradedSecondDamage) { // If we set upgradedSecondMagicNumber = true in our card.
@@ -84,10 +84,10 @@ this.img = img;
         upgradedSecondMagicNumber = true; // Upgraded = true - which does what the above method does.
     }
 
-    public void UpgradeSecondBlock(int amount) { // If we're upgrading (read: changing) the number. Note "upgrade" and NOT "upgraded" - 2 different things. One is a boolean, and then this one is what you will usually use - change the integer by how much you want to upgrade.
-        BaseSecondBlock += amount; // Upgrade the number by the amount you provide in your card.
-        SecondBlock = BaseSecondBlock; // Set the number to be equal to the base value.
-        upgradedSecondBlock = true; // Upgraded = true - which does what the above method does.
+    public void UpgradeThirdMagicNumber(int amount) { // If we're upgrading (read: changing) the number. Note "upgrade" and NOT "upgraded" - 2 different things. One is a boolean, and then this one is what you will usually use - change the integer by how much you want to upgrade.
+        BaseThirdMagicNumber += amount; // Upgrade the number by the amount you provide in your card.
+        ThirdMagicNumber = BaseThirdMagicNumber; // Set the number to be equal to the base value.
+        upgradedThirdMagicNumber = true; // Upgraded = true - which does what the above method does.
     }
 
     public void UpgradeSecondDamage(int amount) { // If we're upgrading (read: changing) the number. Note "upgrade" and NOT "upgraded" - 2 different things. One is a boolean, and then this one is what you will usually use - change the integer by how much you want to upgrade.

@@ -57,7 +57,7 @@ public class SpecializedShot extends AbstractCorrCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
         this.baseMagicNumber = this.magicNumber = AMOUNT;
-        this.BaseSecondMagicNumber = this.SecondMagicNumber = baseMagicNumber-1;
+        this.BaseSecondMagicNumber = this.SecondMagicNumber = AMOUNT-1;
         tags.add(MagicalBase.Ammo);
     }
 
@@ -78,7 +78,7 @@ public class SpecializedShot extends AbstractCorrCard {
         	if(magic((short) 5)) {AbstractDungeon.actionManager.addToBottom(new ManaBlightTriggerAction(m, p, 1,0));
         		
         		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                        new PoisonPower(m, p, this.magicNumber), this.magicNumber));
+                        new PoisonPower(m, p, this.magicNumber), this.SecondMagicNumber));
 
         		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
                         new WeakPower(m, this.SecondMagicNumber, false), this.SecondMagicNumber));

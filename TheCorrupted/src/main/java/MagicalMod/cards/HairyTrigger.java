@@ -70,6 +70,11 @@ public class HairyTrigger extends AbstractCorrCard {
         return new HairyTrigger();
     }
 
+    @Override
+    public boolean canUpgrade() {
+        return true;
+    }
+
     // Upgraded stats.
     @Override
     public void upgrade() {

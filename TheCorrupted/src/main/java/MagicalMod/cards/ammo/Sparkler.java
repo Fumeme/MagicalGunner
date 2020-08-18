@@ -50,14 +50,14 @@ public class Sparkler extends AbstractCorrCard {
     public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
     private static final int COST = 0;
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 1;
 
     // /STAT DECLARATION/
 
     public Sparkler() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        this.baseMagicNumber = 4;
+        this.baseMagicNumber = 3;
         tags.add(MagicalBase.Ammo);
         tags.add(MagicalBase.magdam);
 

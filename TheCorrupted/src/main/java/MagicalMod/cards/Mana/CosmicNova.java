@@ -41,16 +41,15 @@ public class CosmicNova extends AbstractCorrCard {
 	private static final CardType TYPE = CardType.ATTACK;
 	public static final CardColor COLOR = AbstractCardEnum.MAGICAL_COLOR;
 
-	private static final int COST = 1;
+	private static final int COST = 2;
 
-	private int AMOUNT = 3;
 
 	// /STAT DECLARATION/
 
 	public CosmicNova() {
 		super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 		this.baseMagicNumber = 3;
-		this.baseDamage = 13;
+		this.baseDamage = 12;
 		this.isMultiDamage = true;
 		this.exhaust = true;
 	}
@@ -82,7 +81,7 @@ public class CosmicNova extends AbstractCorrCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			this.upgradeName();
-this.upgradeDamage(5);
+this.upgradeDamage(3);
             this.initializeDescription();
 		}
 	}
